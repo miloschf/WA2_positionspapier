@@ -1,0 +1,43 @@
+{
+    "workbench.editorAssociations": {
+        "*.tex": "default"
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex-shell-escape",
+            "command": "C:\\Users\\milos\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOC%"
+            ],
+            "env": {
+                "PATH": "C:\\Users\\milos\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64;C:\\Users\\milos\\AppData\\Roaming\\Python\\Python313\\Scripts;C:\\Users\\milos\\.codex\\tmp\\arg0\\codex-arg08bRa2e;C:\\Program Files\\OpenLogic\\jdk-17.0.13.11-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\msys64\\ucrt64\\bin\\gcc.exe;;C:\\TDM-GCC-64\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Python313\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\milos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\milos\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PyCharm 2025.2.3\\bin;C:\\Users\\milos\\AppData\\Roaming\\npm;c:\\Users\\milos\\.vscode\\extensions\\openai.chatgpt-26.803.41515-win32-x64\\bin\\windows-x86_64"
+            }
+        },
+        {
+            "name": "biber",
+            "command": "C:\\Users\\milos\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\biber.exe",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {
+                "PATH": "C:\\Users\\milos\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64;C:\\Users\\milos\\AppData\\Roaming\\Python\\Python313\\Scripts;C:\\Users\\milos\\.codex\\tmp\\arg0\\codex-arg08bRa2e;C:\\Program Files\\OpenLogic\\jdk-17.0.13.11-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\msys64\\ucrt64\\bin\\gcc.exe;;C:\\TDM-GCC-64\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Python313\\;C:\\Users\\milos\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\milos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\milos\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PyCharm 2025.2.3\\bin;C:\\Users\\milos\\AppData\\Roaming\\npm;c:\\Users\\milos\\.vscode\\extensions\\openai.chatgpt-26.803.41515-win32-x64\\bin\\windows-x86_64"
+            }
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex -> biber -> pdflatex x2",
+            "tools": [
+                "pdflatex-shell-escape",
+                "biber",
+                "pdflatex-shell-escape",
+                "pdflatex-shell-escape"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "lastUsed"
+}

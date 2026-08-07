@@ -1,0 +1,103 @@
+\documentclass{common/nak}
+
+%Deckblattkonfiguration
+%Die Werte in den Klammern können entsprechend angepasst werden
+%\definecolor{nakblue}{RGB}{0,0,89}
+
+\usepackage[printonlyused]{acronym}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+
+
+
+%General stuff
+\graphicspath{{images/}}
+\addbibresource{quellen.bib}
+
+\author{
+	Max Mustermann, Erika Mustermann \\ 
+	\\
+	Nordakademie\\ 
+	Köllner Chaussee 11\\ 
+	25337 Elmshorn Ja \\ \\
+	\href{mailto:max.mustermann@muster.de}{max.mustermann@muster.de}\\
+	\href{mailto:max.mustermann@muster.de}{erika.mustermann@muster.de}
+}
+\title{THEMA}
+    
+
+\begin{document}
+
+\maketitle{}
+
+
+
+%Transferleistungs Seite
+\pagenumbering{Roman}
+\newpage
+ 
+%Inhaltsverzeichnis
+\tableofcontents
+
+%Abbildungsverzeichnis
+\newpage
+\listoffigures
+
+%Abkürzungsverzeichnis
+\newpage
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}
+
+% hier Abkürzungen eintragen, siehe LaTeX Package "acro" - wenn keine Abkürzungen 
+%verwendet werden, einfach Zeile 56-62 löschen oder auskommentieren. 
+
+\end{acronym}
+
+
+%Abbildungscounter sonst bei 2
+\setcounter{figure}{0}
+
+%Seitenzahlen
+\pagenumbering{arabic}
+\newpage
+\setcounter{page}{1}
+
+
+%Sectionen hinzufügen
+\foreach \i in {00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, ...,99} {%
+    \edef\FileName{sections/file\i}%
+    \IfFileExists{\FileName}{%
+       \input{\FileName}%
+    }
+}
+
+
+%Quellen
+\newpage
+\clearpage
+\pagenumbering{Roman}
+\setcounter{page}{5}
+\printbibliography{}
+
+%Anhang
+
+\newpage
+\begin{table}[h!]
+\begin{tabular}{|ll|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Abschnitt}}                                     & \textbf{Bearbeiter} \\ \hline
+\multicolumn{2}{|l|}{1 Einleitung}                                           & Name LastName        \\ \hline
+\multicolumn{2}{|l|}{2 Thema}                                      &                     \\ \hline
+\multicolumn{1}{|l|}{} & 2.1 Subthema                  & Name LastName      \\ \hline
+\multicolumn{1}{|l|}{} & 2.2 Subthema      & Name LastName      \\ \hline
+\multicolumn{1}{|l|}{} & 2.3 Subthema & Name LastName      \\ \hline
+\multicolumn{1}{|l|}{} & 2.4 Subthema             & Name LastName        \\ \hline
+\multicolumn{1}{|l|}{} & 2.5 Subthema                                  & Name LastName      \\ \hline
+\multicolumn{2}{|l|}{3 Thema}                                           & Name LastName        \\ \hline
+\multicolumn{2}{|l|}{4 Thema}                  & Name LastName        \\ \hline
+\end{tabular}
+\end{table}
+
+\end{document}
+
+
