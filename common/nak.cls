@@ -4,7 +4,7 @@
 % Version: v2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{common/nak}[2020/06/29 v1, by Joshua Moeckelmann]
+\ProvidesClass{common/nak}[]
 
 \newif\iflnienglish\lnienglishfalse
 \DeclareOption{english}{\lnienglishtrue}
@@ -37,6 +37,9 @@
 
 %Math
 \RequirePackage{mathptmx}
+
+%Titel und Ueberschriften ebenfalls in Times statt KOMA-Default (Sans Serif)
+\addtokomafont{disposition}{\rmfamily}
 
 %Graphicx
 \RequirePackage{graphicx}
