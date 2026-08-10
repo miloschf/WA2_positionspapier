@@ -11,7 +11,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-shell-escape",
-                "%DOC%"
+                "%DOCFILE%"
             ]
         },
         {
