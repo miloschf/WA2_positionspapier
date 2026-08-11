@@ -69,16 +69,32 @@ Das vorliegende Papier vertritt die Position, dass der Nutzen intelligenter Assi
 
 \begin{table}[!htb]
 	\centering
-	\footnotesize
-	\begin{tabularx}{\textwidth}{@{}p{2.1cm}XX@{}}
+	\small
+	% Linksbuendige Spalten (kein Blocksatz, sonst reissen die schmalen Spalten
+	% Loecher) und zusaetzlicher Zeilenabstand, damit die Zellen nicht an den
+	% Linien kleben.
+	\setlength{\extrarowheight}{2.5pt}
+	\renewcommand{\arraystretch}{1.1}
+	\begin{tabularx}{\textwidth}{@{}
+			>{\raggedright\arraybackslash}p{2.85cm}
+			>{\raggedright\arraybackslash}X
+			>{\raggedright\arraybackslash}X @{}}
 		\hline
-		\textbf{Heraus\-forderung} & \textbf{Zentraler Befund} & \textbf{Bedingung für verantwortbaren Einsatz} \\ \hline
-		Datenschutz & Fehlauslösungen; 56,0\,\% kennen die Überprüfungsseite nicht; 23,3\,\% intransparente Skills & Datensparsamkeit, lokale Verarbeitung, überprüfbare Löschung, Drittanbieterkontrolle \\ \hline
-		IT-Sicherheit & Befehlseinspeisung per Ultraschall und Laser; indirekte Prompt Injection & Sprecherauthentifizierung, Bestätigung kritischer Aktionen, minimale Rechte \\ \hline
-		Abhängigkeit & Wenige Anbieter; Einstellung von Cortana 2023; Übervertrauensbildung & Offene Schnittstellen, Datenportabilität, lokale Rückfallebene, begrenzte Delegation \\ \hline
-		Ethik & Wortfehlerrate 0,35 zu 0,19; feminisierte Gestaltung & Veröffentlichte Prüfung der Erkennungsleistung, geschlechtsneutrale Gestaltungsoptionen \\ \hline
+		\textbf{Herausforderung} & \textbf{Zentraler empirischer Befund} & \textbf{Bedingung für einen verantwortbaren Einsatz} \\ \hline
+		Datenschutz &
+		Mehrere hundert Fehlauslösungen; 56,0\,\% kennen die Überprüfungsseite nicht; 23,3\,\% der Skills sind intransparent &
+		Datensparsamkeit als Voreinstellung, lokale Verarbeitung, überprüfbare Löschung, Kontrolle der Drittanbieter \\[2pt] \hline
+		IT-Sicherheit &
+		Befehlseinspeisung per Ultraschall und Laser; indirekte Prompt Injection &
+		Sprecherauthentifizierung, Bestätigung sicherheitskritischer Aktionen, minimale Rechte für agentische Systeme \\[2pt] \hline
+		Abhängigkeit &
+		Verarbeitung bei wenigen Anbietern; Einstellung von Cortana 2023; belegte Übervertrauensbildung &
+		Offene Schnittstellen, Datenportabilität, lokale Rückfallebenen, begrenzte Delegation \\[2pt] \hline
+		Ethik &
+		Wortfehlerrate 0,35 gegenüber 0,19; feminisierte Gestaltung &
+		Veröffentlichte Prüfung der Erkennungsleistung, geschlechtsneutrale Gestaltungsoptionen \\[2pt] \hline
 	\end{tabularx}
-	\caption[Herausforderungen und abgeleitete Bedingungen]{Herausforderungen und die daraus abgeleiteten Bedingungen.}
+	\caption[Herausforderungen und abgeleitete Bedingungen]{Zuordnung der vier Herausforderungen zu den jeweils abgeleiteten Bedingungen.}
 	\label{tab:bedingungen}
 \end{table}
 
