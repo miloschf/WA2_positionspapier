@@ -46,6 +46,16 @@
 \title{Intelligente Assistenten – Technologie und Möglichkeiten von Alexa, Siri, Cortana \& Co.}
 
 
+% Seitenstil der Titelseite: Kopfzeile wie ueberall, aber keine Seitenzahl.
+% Die Titelseite zaehlt als Seite I mit, gedruckt wird die Nummer erst ab
+% dem Inhaltsverzeichnis.
+\fancypagestyle{nakTitelseite}{%
+	\fancyhf{}%
+	\fancyhead[L]{NORDAKADEMIE Hochschule der Wirtschaft}%
+	\fancyhead[R]{\includegraphics[height=0.9cm]{images/Nordakademie_Logo.png}}%
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,10 +63,12 @@
 % ----------------------------------------------------------------------------
 % Titelseite
 % ----------------------------------------------------------------------------
-\maketitle{}
-
-% Transferleistungs Seite
+% Wichtig: \pagenumbering setzt den Seitenzaehler zurueck und wirkt auf die
+% gerade laufende Seite. Es muss daher VOR \maketitle stehen, sonst bekommt
+% die Titelseite nachtraeglich die roemische I aufgedruckt.
 \pagenumbering{Roman}
+\maketitle{}
+\thispagestyle{nakTitelseite}
 \newpage
 
 % ----------------------------------------------------------------------------
@@ -89,10 +101,10 @@
 % Abbildungscounter sonst bei 2
 \setcounter{figure}{0}
 
-% Seitenzahlen
-\pagenumbering{arabic}
+% Seitenzahlen: erst umbrechen, dann umschalten. Andersherum bekaeme das
+% Abkuerzungsverzeichnis nachtraeglich die arabische 1 statt der roemischen IV.
 \newpage
-\setcounter{page}{1}
+\pagenumbering{arabic}
 
 % ----------------------------------------------------------------------------
 % Abschnitte einbinden
