@@ -46,13 +46,24 @@
 \title{Intelligente Assistenten – Technologie und Möglichkeiten von Alexa, Siri, Cortana \& Co.}
 
 
-% Seitenstil der Titelseite: Kopfzeile wie ueberall, aber keine Seitenzahl.
-% Die Titelseite zaehlt als Seite I mit, gedruckt wird die Nummer erst ab
-% dem Inhaltsverzeichnis.
-\fancypagestyle{nakTitelseite}{%
+% Seitenstil ohne Seitenzahl, Kopfzeile bleibt wie ueberall. Wird fuer
+% Titelseite, Verzeichnisse sowie Literatur und Anhang verwendet. Nummeriert
+% wird ausschliesslich der Textteil.
+% Achtung: \fancyhf{} wirkt global, nicht nur innerhalb des Stils. Beide Stile
+% muessen die Kopf- und Fusszeile daher vollstaendig selbst setzen, sonst
+% bleibt die Fusszeile nach einem Wechsel leer.
+\fancypagestyle{nakohnezahl}{%
 	\fancyhf{}%
 	\fancyhead[L]{NORDAKADEMIE Hochschule der Wirtschaft}%
 	\fancyhead[R]{\includegraphics[height=0.9cm]{images/Nordakademie_Logo.png}}%
+}
+
+% Seitenstil des Textteils: zusaetzlich die Seitenzahl mittig in der Fusszeile.
+\fancypagestyle{nakmitzahl}{%
+	\fancyhf{}%
+	\fancyhead[L]{NORDAKADEMIE Hochschule der Wirtschaft}%
+	\fancyhead[R]{\includegraphics[height=0.9cm]{images/Nordakademie_Logo.png}}%
+	\fancyfoot[C]{\thepage}%
 }
 
 
@@ -63,12 +74,10 @@
 % ----------------------------------------------------------------------------
 % Titelseite
 % ----------------------------------------------------------------------------
-% Wichtig: \pagenumbering setzt den Seitenzaehler zurueck und wirkt auf die
-% gerade laufende Seite. Es muss daher VOR \maketitle stehen, sonst bekommt
-% die Titelseite nachtraeglich die roemische I aufgedruckt.
-\pagenumbering{Roman}
+% Titelseite und Verzeichnisse tragen keine Seitenzahl.
+\pagestyle{nakohnezahl}
 \maketitle{}
-\thispagestyle{nakTitelseite}
+\thispagestyle{nakohnezahl}
 \newpage
 
 % ----------------------------------------------------------------------------
@@ -101,9 +110,10 @@
 % Abbildungscounter sonst bei 2
 \setcounter{figure}{0}
 
-% Seitenzahlen: erst umbrechen, dann umschalten. Andersherum bekaeme das
-% Abkuerzungsverzeichnis nachtraeglich die arabische 1 statt der roemischen IV.
+% Ab hier beginnt der Textteil, nur er wird nummeriert. Erst umbrechen, dann
+% umschalten, sonst bekaeme das Abkuerzungsverzeichnis noch die 1 aufgedruckt.
 \newpage
+\pagestyle{nakmitzahl}
 \pagenumbering{arabic}
 
 % ----------------------------------------------------------------------------
@@ -122,8 +132,8 @@
 % ----------------------------------------------------------------------------
 \newpage
 \clearpage
-\pagenumbering{Roman}
-\setcounter{page}{5}
+\pagestyle{nakohnezahl}
+\thispagestyle{nakohnezahl}
 \printbibliography{}
 
 % ----------------------------------------------------------------------------
