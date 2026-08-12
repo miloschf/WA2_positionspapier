@@ -5,7 +5,7 @@
 \section{Herausforderungen (Luca Kettner)}
 \label{sec:herausforderungen}
 
-Den dargestellten Chancen stehen Herausforderungen gegenüber, die entsprechend der eingangs formulierten Position nicht als gleichwertige Gegenargumente, sondern als notwendige Bedingungen behandelt werden: Sie beschreiben, welche rechtlichen, technischen und gesellschaftlichen Voraussetzungen ein verantwortungsvoller Einsatz erfordert. Betrachtet werden dazu Datenschutz, \acs{IT}-Sicherheit, Abhängigkeit und Ethik.
+Den dargestellten Chancen stehen Herausforderungen gegenüber, die entsprechend der eingangs formulierten Position nicht als gleichwertige Gegenargumente, sondern als notwendige Bedingungen behandelt werden. Sie beschreiben, welche rechtlichen, technischen und gesellschaftlichen Voraussetzungen ein verantwortungsvoller Einsatz erfordert. Betrachtet werden dazu Datenschutz, \acs{IT}-Sicherheit, Abhängigkeit und Ethik.
 
 \subsection{Datenschutz}
 \label{subsec:datenschutz}
@@ -73,28 +73,26 @@ Das vorliegende Papier vertritt die Position, dass der Nutzen intelligenter Assi
 	% Linksbuendige Spalten (kein Blocksatz, sonst reissen die schmalen Spalten
 	% Loecher) und zusaetzlicher Zeilenabstand, damit die Zellen nicht an den
 	% Linien kleben.
-	\setlength{\extrarowheight}{2.5pt}
+	\setlength{\extrarowheight}{2pt}
 	\renewcommand{\arraystretch}{1.1}
 	\begin{tabularx}{\textwidth}{@{}
 			>{\raggedright\arraybackslash}p{2.85cm}
 			>{\raggedright\arraybackslash}X
 			>{\raggedright\arraybackslash}X @{}}
 		\hline
-		\textbf{Herausforderung} & \textbf{Zentraler empirischer Befund} & \textbf{Bedingung für einen verantwortbaren Einsatz} \\ \hline
-		Datenschutz &
-		Mehrere hundert Fehlauslösungen, 56,0\,\% kennen die Überprüfungsseite nicht, 23,3\,\% intransparente Skills &
-		Datensparsamkeit als Voreinstellung, lokale Verarbeitung, überprüfbare Löschung, Kontrolle der Drittanbieter \\[2pt] \hline
-		IT-Sicherheit &
-		Befehlseinspeisung per Ultraschall und Laser, indirekte Prompt Injection &
-		Sprecherauthentifizierung, Bestätigung sicherheitskritischer Aktionen, minimale Rechte für agentische Systeme \\[2pt] \hline
-		Abhängigkeit &
-		Verarbeitung bei wenigen Anbietern, Einstellung von Cortana 2023, belegte Übervertrauensbildung &
-		Offene Schnittstellen, Datenportabilität, lokale Rückfallebenen, begrenzte Delegation \\[2pt] \hline
-		Ethik &
-		Wortfehlerrate 0,35 gegenüber 0,19, feminisierte Gestaltung &
-		Veröffentlichte Prüfung der Erkennungsleistung, geschlechtsneutrale Gestaltungsoptionen \\[2pt] \hline
+		\textbf{Herausforderung} & \textbf{Empirischer Befund} & \textbf{Abgeleitete Bedingung} \\ \hline
+		Datenschutz   & Mehrere hundert Fehlauslösungen              & Lokale Erkennung, Datensparsamkeit \\
+		              & 56,0\,\% kennen die Überprüfungsseite nicht  & Sichtbare und überprüfbare Löschung \\
+		              & 23,3\,\% der Skills sind intransparent       & Verbindliche Kontrolle der Drittanbieter \\ \hline
+		IT-Sicherheit & Einspeisung per Ultraschall und Laser        & Sprecherauthentifizierung \\
+		              & Indirekte Prompt Injection                   & Minimale Rechte, Bestätigungspflicht \\ \hline
+		Abhängigkeit  & Verarbeitung bei wenigen Anbietern           & Offene Schnittstellen, Datenportabilität \\
+		              & Einstellung von Cortana 2023                 & Lokale Rückfallebenen \\
+		              & Belegte Übervertrauensbildung                & Bewusste Begrenzung der Delegation \\ \hline
+		Ethik         & Wortfehlerrate 0,35 gegenüber 0,19           & Veröffentlichte Prüfung je Sprechergruppe \\
+		              & Feminisierte Gestaltung                      & Geschlechtsneutrale Gestaltungsoptionen \\ \hline
 	\end{tabularx}
-	\caption[Herausforderungen und abgeleitete Bedingungen]{Zuordnung der vier Herausforderungen zu den jeweils abgeleiteten Bedingungen.}
+	\caption[Herausforderungen und abgeleitete Bedingungen]{Zuordnung der einzelnen Befunde zu den jeweils daraus abgeleiteten Bedingungen für einen verantwortbaren Einsatz.}
 	\label{tab:bedingungen}
 \end{table}
 
