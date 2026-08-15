@@ -21,6 +21,12 @@
 % Allgemeine Einstellungen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Trennstellen fuer wiederkehrende Komposita. LaTeX kennt die Wortfuge nicht
+% und trennt sonst z. B. "Sprachas-sistenten".
+\hyphenation{Sprach-as-sis-tent Sprach-as-sis-ten-ten Sprach-as-sis-ten-tin
+             Sprach-as-sis-ten-tin-nen Sprach-as-sis-tenz Sprach-er-ken-nung
+             Dritt-an-bie-ter Dritt-an-bie-ter-oe-ko-sys-tem}
+
 \graphicspath{{images/}}
 \addbibresource{quellen.bib}
 
@@ -87,9 +93,11 @@
 % Inhaltsverzeichnis
 \tableofcontents
 
-% Abbildungsverzeichnis
+% Abbildungs- und Tabellenverzeichnis. Beide sind kurz und stehen daher
+% gemeinsam auf einer Seite.
 \newpage
 \listoffigures
+\listoftables
 
 % Abkürzungsverzeichnis
 \newpage
