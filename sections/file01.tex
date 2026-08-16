@@ -35,7 +35,7 @@ Die Funktionsweise intelligenter Sprachassistenten fußt auf der Interaktion dre
 		% Querschnittsebene darunter.
 		\tikzset{
 			stufe/.style={draw=nakblue, fill=nakblue!10, line width=0.4pt,
-			              minimum width=36mm, minimum height=10mm, align=center,
+			              minimum width=34mm, minimum height=10mm, align=center,
 			              font=\footnotesize, inner sep=1mm},
 			fluss/.style={-latex, draw=nakblue, line width=0.6pt}
 		}
@@ -48,10 +48,12 @@ Die Funktionsweise intelligenter Sprachassistenten fußt auf der Interaktion dre
 		\draw[fluss] (nlp.east) -- (act.west);
 		\draw[fluss] (act.east) -- (158,0);
 
-		\node[font=\scriptsize, anchor=south] at ( -1, 2.5) {Audio};
-		\node[font=\scriptsize, anchor=south] at ( 48.5, 2.5) {Text};
-		\node[font=\scriptsize, anchor=south] at (101.5, 2.5) {Intention};
-		\node[font=\scriptsize, anchor=south] at (151, 2.5) {Reaktion};
+		% y bewusst niedrig: Die Kaesten reichen bis etwa +4,9 mm, hoehere
+		% Beschriftungen wuerden ueber deren Oberkante ragen.
+		\node[font=\scriptsize, anchor=south] at (  -1.5, 1.4) {Audio};
+		\node[font=\scriptsize, anchor=south] at (  48.5, 1.4) {Text};
+		\node[font=\scriptsize, anchor=south] at ( 101.5, 1.4) {Intention};
+		\node[font=\scriptsize, anchor=south] at ( 151.5, 1.4) {Reaktion};
 
 		\draw[draw=nakblue!50, fill=nakblue!5, line width=0.4pt]
 			(4,-15) rectangle (146,-8);
