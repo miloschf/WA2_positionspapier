@@ -19,7 +19,15 @@ Die vorliegende Position nimmt eine dezidierte Abgrenzung zu zwei divergierenden
 \subsection{Vom gesprochenen Wort zur Handlung}
 Die Funktionsweise intelligenter Sprachassistenten fußt auf der Interaktion dreier Technologiebereiche, die in sequentieller Abfolge ineinandergreifen \cite{Sarikaya2017}. Konkret handelt es sich um die automatische Spracherkennung, die Verarbeitung natürlicher Sprache sowie das maschinelle Lernen. Die Spracherkennung ist ein Prozess, bei dem akustische Signale in eine maschinenlesbare Textform umgewandelt werden. Aktuelle Systeme integrieren zunehmend tiefe neuronale Netze in die klassische Signalverarbeitung, um eine erhöhte Robustheit gegenüber Hintergrundgeräuschen zu gewährleisten \cite{HaebUmbach2019}. Anschließend bestimmt die Verarbeitung natürlicher Sprache die Intention der Nutzenden sowie die relevanten Einzelelemente des Befehls, um daraus eine passende Reaktion abzuleiten \cite{weld2022survey}. Das maschinelle Lernen bildet schließlich die Grundlage dafür, dass sich das System durch die Auswertung beobachteter Interaktionsdaten fortlaufend an einzelne Nutzende anpasst \cite{kocaballi2019personalization}. Erst das Ineinandergreifen dieser drei Komponenten ermöglicht die für intelligente Sprachassistenten charakteristische Interaktion in nahezu Echtzeit, bei der die Ausgabe einer Komponente jeweils die Eingabe der nachfolgenden bildet (Abbildung~\ref{fig:verarbeitungskette}) \cite{Sarikaya2017}.
 
-\begin{figure}[!htb]
+% [H] statt [!htb]: Die Abbildung soll genau zwischen den beiden Absaetzen
+% von 2.1 stehen und nicht an den Seitenanfang wegfliessen. Der verringerte
+% intextsep und abovecaptionskip sorgen dafuer, dass sie dort noch auf die
+% Seite passt. Ohne die beiden Kuerzungen fehlen rund 4 pt und die Abbildung
+% rutscht auf die naechste Seite.
+\begingroup
+\setlength{\intextsep}{3pt}
+\setlength{\abovecaptionskip}{7pt}
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[x=1mm,y=1mm]
 		% Verarbeitungskette: drei Komponenten in Reihe, dazwischen die jeweils
@@ -27,7 +35,7 @@ Die Funktionsweise intelligenter Sprachassistenten fußt auf der Interaktion dre
 		% Querschnittsebene darunter.
 		\tikzset{
 			stufe/.style={draw=nakblue, fill=nakblue!10, line width=0.4pt,
-			              minimum width=36mm, minimum height=13mm, align=center,
+			              minimum width=36mm, minimum height=10mm, align=center,
 			              font=\footnotesize, inner sep=1mm},
 			fluss/.style={-latex, draw=nakblue, line width=0.6pt}
 		}
@@ -46,13 +54,14 @@ Die Funktionsweise intelligenter Sprachassistenten fußt auf der Interaktion dre
 		\node[font=\scriptsize, anchor=south] at (151, 2.5) {Reaktion};
 
 		\draw[draw=nakblue!50, fill=nakblue!5, line width=0.4pt]
-			(4,-20) rectangle (146,-11);
-		\node[font=\footnotesize] at (75,-15.5)
+			(4,-15) rectangle (146,-8);
+		\node[font=\footnotesize] at (75,-11.5)
 			{Maschinelles Lernen: fortlaufende Anpassung an einzelne Nutzende};
 	\end{tikzpicture}
 	\caption[Verarbeitungskette intelligenter Assistenten]{Verarbeitungskette intelligenter Assistenten; eigene Darstellung nach \textcite{Sarikaya2017}.}
 	\label{fig:verarbeitungskette}
 \end{figure}
+\endgroup
 
 
 Die fortlaufende, weitgehend automatisierte Auswertung von Sprach- und Nutzungsdaten bildet die technologische Voraussetzung für die später diskutierten Datenschutzbedenken. Die Effektivität intelligenter Assistenzsysteme gründet auf denselben Verarbeitungsschritten, die für die damit einhergehenden Datenschutzrisiken verantwortlich sind. Chancen und Risiken sind demnach nicht als separate Aspekte zu betrachten, sondern als zwei Seiten derselben technologischen Grundlage.
